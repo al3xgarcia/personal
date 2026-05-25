@@ -1,12 +1,12 @@
-import type { MouseEvent, ReactNode } from "react";
+import type { MouseEvent } from "react";
 import type { BrandEntry } from "../data/brands";
 import { hexToCss } from "../icons";
 import { BrandIcon } from "./BrandIcon";
 
 export type BrandLinkProps = {
   href: string;
-  children: ReactNode;
-  slug: string;
+  label: string;
+  iconSrc: string;
   brandColor?: string;
   className?: string;
   onClick?: (event: MouseEvent<HTMLAnchorElement>) => void;
@@ -14,55 +14,47 @@ export type BrandLinkProps = {
 
 export function BrandLinkFromEntry({
   entry,
-  children,
   linkLabel,
   className,
   onClick,
 }: {
   entry: BrandEntry;
-  children?: ReactNode;
   linkLabel?: string;
   className?: string;
   onClick?: (event: MouseEvent<HTMLAnchorElement>) => void;
 }) {
-  const label = linkLabel ?? children ?? entry.label;
   const color = entry.hex ? hexToCss(entry.hex) : undefined;
 
   return (
     <BrandLink
       href={entry.href}
-      slug={entry.slug}
+      iconSrc={entry.iconSrc}
+      label={linkLabel ?? entry.label}
       brandColor={color}
       className={className}
       onClick={onClick}
-    >
-      {label}
-    </BrandLink>
+    />
   );
 }
 
 export function BrandLink({
   href,
-  children,
-  slug,
+  label,
+  iconSrc,
   brandColor,
   className = "",
   onClick,
 }: BrandLinkProps) {
   return (
-    <span
-      className={`inline-flex items-center gap-1 align-baseline whitespace-nowrap ${className}`}
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label={label}
+      className={`inline-flex shrink-0 align-middle no-underline ${className}`}
+      onClick={onClick}
     >
-      <BrandIcon slug={slug} brandColor={brandColor} />
-      <a
-        href={href}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="underline decoration-muted underline-offset-2 hover:decoration-foreground"
-        onClick={onClick}
-      >
-        {children}
-      </a>
-    </span>
+      <BrandIcon iconSrc={iconSrc} brandColor={brandColor} />
+    </a>
   );
 }

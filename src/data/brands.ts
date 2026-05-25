@@ -1,9 +1,10 @@
-export type BrandSource = "simple-icons" | "fallback" | "lucide";
+export type BrandSource = "image";
 
 export type BrandEntry = {
   slug: string;
   href: string;
   label: string;
+  iconSrc: string;
   hex?: string;
   source: BrandSource;
 };
@@ -14,64 +15,77 @@ export const brands = {
     slug: "heb",
     href: "https://www.heb.com/",
     label: "H-E-B",
+    iconSrc: "/heb.webp",
     hex: "EE2A24",
-    source: "fallback",
+    source: "image",
   },
   spurs: {
     slug: "sanantoniospurs",
     href: "https://www.nba.com/spurs",
     label: "San Antonio Spurs",
+    iconSrc: "/spurs.webp",
     hex: "C4CED4",
-    source: "fallback",
+    source: "image",
   },
   nextdoor: {
     slug: "nextdoor",
     href: "https://nextdoor.com/",
     label: "Nextdoor",
+    iconSrc: "/nextdoor.webp",
     hex: "8ED500",
-    source: "simple-icons",
+    source: "image",
   },
   google: {
     slug: "google",
     href: "https://www.google.com/",
     label: "Google",
+    iconSrc: "/google.webp",
     hex: "4285F4",
-    source: "simple-icons",
+    source: "image",
   },
   reddit: {
     slug: "reddit",
     href: "https://www.reddit.com/",
     label: "Reddit",
+    iconSrc: "/reddit.webp",
     hex: "FF4500",
-    source: "simple-icons",
+    source: "image",
   },
   instagram: {
     slug: "instagram",
-    href: "https://www.instagram.com/",
+    href: "https://www.instagram.com/al3xgarcia",
     label: "Instagram",
+    iconSrc: "/instagram.webp",
     hex: "FF0069",
-    source: "simple-icons",
+    source: "image",
   },
   linkedin: {
     slug: "linkedin",
-    href: "https://www.linkedin.com/",
+    href: "https://www.linkedin.com/in/al3xgarcia/",
     label: "LinkedIn",
+    iconSrc: "/linkedin.webp",
     hex: "0A66C2",
-    source: "fallback",
+    source: "image",
   },
   strava: {
     slug: "strava",
-    href: "https://www.strava.com/",
+    href: "https://www.strava.com/athletes/42900839",
     label: "Strava",
+    iconSrc: "/strava.webp",
     hex: "FC4C02",
-    source: "simple-icons",
+    source: "image",
   },
   blog: {
     slug: "blog",
-    href: "https://bearblog.dev/",
+    href: "https://monkeymind.bearblog.dev/",
     label: "Bear Blog",
-    source: "lucide",
+    iconSrc: "/blog.webp",
+    source: "image",
   },
 } as const satisfies Record<string, BrandEntry>;
 
 export type BrandKey = keyof typeof brands;
+
+export function getBrandBySlug(slug: string): BrandEntry | undefined {
+  return Object.values(brands).find((brand) => brand.slug === slug);
+}
