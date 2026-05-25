@@ -10,7 +10,7 @@ function App() {
           src="/alex_garcia.png"
           alt=""
           decoding="async"
-          className="-mt-0.5 ml-1 inline-block h-[0.92em] w-[0.92em] rounded-full object-cover align-middle"
+          className="-mt-0.5 ml-1 inline-block h-[0.92em] w-[0.92em] rounded-[var(--radius-icon-tile)] object-cover align-middle"
         />
       </h1>
       <div className="space-y-6">
