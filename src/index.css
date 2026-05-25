@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: ui-sans-serif, system-ui, sans-serif;
+  --color-surface: oklch(0.99 0 0);
+  --color-foreground: oklch(0.2 0 0);
+  --color-muted: oklch(0.55 0 0);
+
+  --size-icon-tile: 1.25rem;
+  --radius-icon-tile: 0.25rem;
+
+  --color-brand-google: #4285f4;
+  --color-brand-reddit: #ff4500;
+  --color-brand-instagram: #ff0069;
+  --color-brand-nextdoor: #8ed500;
+  --color-brand-strava: #fc4c02;
+  --color-brand-heb: #ee2a24;
+  --color-brand-spurs: #c4ced4;
+  --color-brand-linkedin: #0a66c2;
+  --color-brand-blog: var(--color-muted);
+}
+
+@layer theme {
+  :root {
+    @variant dark {
+      --color-surface: oklch(0.12 0 0);
+      --color-foreground: oklch(0.95 0 0);
+      --color-muted: oklch(0.65 0 0);
+      --color-brand-blog: oklch(0.45 0 0);
+    }
+  }
+}
+
+@layer base {
+  body {
+    @apply m-0 min-h-svh bg-surface font-sans text-foreground antialiased;
+  }
+}
