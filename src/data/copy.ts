@@ -2,7 +2,7 @@ import type { BrandKey } from "./brands";
 
 export type CopySegment =
   | { type: "text"; value: string }
-  | { type: "brand"; key: BrandKey; linkLabel?: string }
+  | { type: "brand"; key: BrandKey }
   | { type: "link"; href: string; label: string };
 
 export const introParagraph: CopySegment[] = [
@@ -13,20 +13,20 @@ export const introParagraph: CopySegment[] = [
   { type: "text", value: " " },
   { type: "brand", key: "nextdoor" },
   { type: "text", value: " " },
-  { type: "brand", key: "google", linkLabel: "Google" },
+  { type: "brand", key: "google" },
   { type: "text", value: " " },
-  { type: "brand", key: "reddit", linkLabel: "Reddit" },
+  { type: "brand", key: "reddit" },
 ];
 
 export const onlineParagraph: CopySegment[] = [
   { type: "text", value: "You can also find me on " },
-  { type: "brand", key: "instagram", linkLabel: "Instagram" },
+  { type: "brand", key: "instagram" },
   { type: "text", value: ". I post longer thoughts on " },
-  { type: "brand", key: "blog", linkLabel: "Bear Blog" },
+  { type: "brand", key: "blog" },
   { type: "text", value: ", share work on " },
-  { type: "brand", key: "linkedin", linkLabel: "LinkedIn" },
+  { type: "brand", key: "linkedin" },
   { type: "text", value: ", and log runs on " },
-  { type: "brand", key: "strava", linkLabel: "Strava" },
+  { type: "brand", key: "strava" },
   { type: "text", value: ". Want to say hi? " },
   {
     type: "link",

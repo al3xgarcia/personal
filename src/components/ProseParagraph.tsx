@@ -26,11 +26,7 @@ export function ProseParagraph({ segments, className = "" }: ProseParagraphProps
 
         const entry = brands[segment.key];
         return (
-          <BrandLinkFromEntry
-            key={index}
-            entry={entry}
-            linkLabel={segment.linkLabel}
-          />
+          <BrandLinkFromEntry key={index} entry={entry} />
         );
       })}
     </p>
