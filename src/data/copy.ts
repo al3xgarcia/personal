@@ -2,7 +2,8 @@ import type { BrandKey } from "./brands";
 
 export type CopySegment =
   | { type: "text"; value: string }
-  | { type: "brand"; key: BrandKey; linkLabel?: string };
+  | { type: "brand"; key: BrandKey; linkLabel?: string }
+  | { type: "link"; href: string; label: string };
 
 export const introParagraph: CopySegment[] = [
   { type: "text", value: "I am a Product Manager " },
@@ -26,5 +27,11 @@ export const onlineParagraph: CopySegment[] = [
   { type: "brand", key: "linkedin", linkLabel: "LinkedIn" },
   { type: "text", value: ", and log runs on " },
   { type: "brand", key: "strava", linkLabel: "Strava" },
+  { type: "text", value: ". Want to say hi? " },
+  {
+    type: "link",
+    href: "mailto:l3xgarcia@gmail.com",
+    label: "Click here",
+  },
   { type: "text", value: "." },
 ];
