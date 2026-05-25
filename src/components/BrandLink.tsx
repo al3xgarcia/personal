@@ -6,7 +6,7 @@ import { BrandIcon } from "./BrandIcon";
 export type BrandLinkProps = {
   href: string;
   children: ReactNode;
-  slug: string;
+  iconSrc: string;
   brandColor?: string;
   className?: string;
   onClick?: (event: MouseEvent<HTMLAnchorElement>) => void;
@@ -31,7 +31,7 @@ export function BrandLinkFromEntry({
   return (
     <BrandLink
       href={entry.href}
-      slug={entry.slug}
+      iconSrc={entry.iconSrc}
       brandColor={color}
       className={className}
       onClick={onClick}
@@ -44,7 +44,7 @@ export function BrandLinkFromEntry({
 export function BrandLink({
   href,
   children,
-  slug,
+  iconSrc,
   brandColor,
   className = "",
   onClick,
@@ -53,7 +53,7 @@ export function BrandLink({
     <span
       className={`inline-flex items-center gap-1 align-baseline whitespace-nowrap ${className}`}
     >
-      <BrandIcon slug={slug} brandColor={brandColor} />
+      <BrandIcon iconSrc={iconSrc} brandColor={brandColor} />
       <a
         href={href}
         target="_blank"
