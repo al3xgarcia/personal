@@ -6,7 +6,7 @@ export type CopySegment =
   | { type: "link"; href: string; label: string };
 
 export const introParagraph: CopySegment[] = [
-  { type: "text", value: "I am a Product Manager " },
+  { type: "text", value: "I am a product manager with experiences at " },
   { type: "brand", key: "heb" },
   { type: "text", value: " " },
   { type: "brand", key: "spurs" },
@@ -27,7 +27,11 @@ export const onlineParagraph: CopySegment[] = [
   { type: "brand", key: "linkedin" },
   { type: "text", value: ", and log runs on " },
   { type: "brand", key: "strava" },
-  { type: "text", value: ". Want to say hi? " },
+  { type: "text", value: "." },
+];
+
+export const contactParagraph: CopySegment[] = [
+  { type: "text", value: "Want to say hey? " },
   {
     type: "link",
     href: "mailto:l3xgarcia@gmail.com",
