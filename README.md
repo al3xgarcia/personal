@@ -1,23 +1,13 @@
 # Personal landing page
 
-Single-page personal site built with Vite, React, TypeScript, and Tailwind CSS v4. Inline brand links use Simple Icons (with fallbacks) and Mixpanel for analytics.
+Single-page personal site built with Vite, React, TypeScript, and Tailwind CSS v4. Inline brand links use Simple Icons (with fallbacks for brands not in the library).
 
 ## Setup
 
 ```bash
 npm install
-cp .env.example .env.local
-# Add your Mixpanel project token to .env.local
 npm run dev
 ```
-
-## Environment
-
-| Variable | Description |
-|----------|-------------|
-| `VITE_MIXPANEL_TOKEN` | Mixpanel project token (browser SDK) |
-
-Set this in Vercel under **Project → Settings → Environment Variables** for production.
 
 ## Scripts
 
