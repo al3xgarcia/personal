@@ -21,7 +21,7 @@ export function BrandIcon({ slug, brandColor, className = "" }: BrandIconProps) 
     if (isBlog) {
       return (
         <NotebookPen
-          className="size-3.5 text-foreground"
+          className="size-7 text-foreground"
           strokeWidth={2}
           aria-hidden
         />
@@ -34,7 +34,7 @@ export function BrandIcon({ slug, brandColor, className = "" }: BrandIconProps) 
           role="img"
           aria-hidden
           viewBox="0 0 24 24"
-          className="size-3.5"
+          className="size-7"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path d={simple.path} fill="currentColor" />
@@ -50,7 +50,7 @@ export function BrandIcon({ slug, brandColor, className = "" }: BrandIconProps) 
           role="img"
           aria-hidden
           viewBox="0 0 24 24"
-          className="size-3.5"
+          className="size-7"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path d={path} fill="currentColor" />
@@ -63,7 +63,7 @@ export function BrandIcon({ slug, brandColor, className = "" }: BrandIconProps) 
 
   return (
     <span
-      className={`inline-flex size-5 shrink-0 items-center justify-center rounded-[var(--radius-icon-tile)] p-0.5 text-white ${isBlog ? "text-foreground" : ""} ${className}`}
+      className={`inline-flex size-10 shrink-0 items-center justify-center rounded-[var(--radius-icon-tile)] p-1 text-white ${isBlog ? "text-foreground" : ""} ${className}`}
       style={{ backgroundColor: isBlog ? undefined : backgroundColor }}
       aria-hidden
     >

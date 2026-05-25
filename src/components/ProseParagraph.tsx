@@ -10,7 +10,7 @@ type ProseParagraphProps = {
 
 export function ProseParagraph({ segments, className = "" }: ProseParagraphProps) {
   return (
-    <p className={`text-lg leading-relaxed text-foreground ${className}`}>
+    <p className={`text-4xl leading-relaxed text-foreground ${className}`}>
       {segments.map((segment, index) => {
         if (segment.type === "text") {
           return <span key={index}>{segment.value}</span>;
