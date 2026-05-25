@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "SN Pro", ui-sans-serif, system-ui, sans-serif;
   --color-surface: oklch(0.99 0 0);
   --color-foreground: oklch(0.2 0 0);
   --color-muted: oklch(0.55 0 0);

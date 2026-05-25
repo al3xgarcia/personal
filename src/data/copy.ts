@@ -5,24 +5,20 @@ export type CopySegment =
   | { type: "brand"; key: BrandKey; linkLabel?: string };
 
 export const introParagraph: CopySegment[] = [
-  { type: "text", value: "Hi — I shop at " },
+  { type: "text", value: "I am a Product Manager " },
   { type: "brand", key: "heb" },
-  { type: "text", value: ", cheer for the " },
+  { type: "text", value: " " },
   { type: "brand", key: "spurs" },
-  {
-    type: "text",
-    value: ", and keep up with neighbors on ",
-  },
+  { type: "text", value: " " },
   { type: "brand", key: "nextdoor" },
-  { type: "text", value: "." },
+  { type: "text", value: " " },
+  { type: "brand", key: "google", linkLabel: "Google" },
+  { type: "text", value: " " },
+  { type: "brand", key: "reddit", linkLabel: "Reddit" },
 ];
 
 export const onlineParagraph: CopySegment[] = [
-  { type: "text", value: "You can find me on " },
-  { type: "brand", key: "google", linkLabel: "Google" },
-  { type: "text", value: ", " },
-  { type: "brand", key: "reddit", linkLabel: "Reddit" },
-  { type: "text", value: ", and " },
+  { type: "text", value: "You can also find me on " },
   { type: "brand", key: "instagram", linkLabel: "Instagram" },
   { type: "text", value: ". I post longer thoughts on " },
   { type: "brand", key: "blog", linkLabel: "Bear Blog" },
